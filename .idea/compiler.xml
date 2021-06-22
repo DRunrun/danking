@@ -16,4 +16,11 @@
       <module name="thinking-in-multi-thread" target="8" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="thinking-in-basics" options="-parameters" />
+      <module name="thinking-in-spring" options="-parameters" />
+      <module name="thinking-in-thread" options="-parameters" />
+    </option>
+  </component>
 </project>

@@ -2,8 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--模型版本: 声明项目遵循哪一个POM模型版本-->
     <modelVersion>4.0.0</modelVersion>
-
+    <!--父项目的坐标-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/>
+    </parent>
     <groupId>org.danking</groupId>
     <artifactId>danking</artifactId>
     <packaging>pom</packaging>
@@ -14,9 +21,56 @@
         <module>thinking-in-basics</module>
     </modules>
 
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <fastjson.version>1.2.74</fastjson.version>
+        <mysql.version>8.0.16</mysql.version>
+        <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
     </properties>
+    <dependencies>
+        <!--SpringCloud 微服务-->
+        <dependency>
+            <!--定义隶属的实际项目，坐标元素之一-->
+            <groupId>org.springframework.cloud</groupId>
+            <!--定义项目中的一个模块，坐标元素之一-->
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <!--定义依赖或项目的版本，坐标元素之一-->
+            <version>${spring-cloud.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <!-- SpringBoot 依赖配置 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>${spring-boot.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <!--mysql 依赖-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <!-- JSON 解析器和生成器 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+    </dependencies>
 
+    <!--构建项目（打包生成可执行文件）时需要的信息-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
