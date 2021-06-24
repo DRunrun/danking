@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="thinking-in-eureka" />
         <module name="thinking-in-thread" />
-        <module name="thinking-in-basics" />
         <module name="thinking-in-spring" />
+        <module name="thinking-in-basics" />
+        <module name="thinking-in-algorithm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,7 +20,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="thinking-in-algorithm" options="-parameters" />
       <module name="thinking-in-basics" options="-parameters" />
+      <module name="thinking-in-eureka" options="-parameters" />
       <module name="thinking-in-spring" options="-parameters" />
       <module name="thinking-in-thread" options="-parameters" />
     </option>

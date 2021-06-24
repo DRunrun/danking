@@ -19,6 +19,8 @@
         <module>thinking-in-spring</module>
         <module>thinking-in-thread</module>
         <module>thinking-in-basics</module>
+        <module>thinking-in-eureka</module>
+        <module>thinking-in-algorithm</module>
     </modules>
 
 
