@@ -21,6 +21,7 @@
         <module>thinking-in-basics</module>
         <module>thinking-in-eureka</module>
         <module>thinking-in-algorithm</module>
+        <module>thinking-in-redis</module>
     </modules>
 
 

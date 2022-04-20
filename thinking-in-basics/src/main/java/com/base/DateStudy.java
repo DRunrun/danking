@@ -18,9 +18,14 @@ public class DateStudy {
 
     private static void LocalDateStudy() {
 
-
+       LocalDateTime todayDateTime = LocalDate.now().atStartOfDay();
+        LocalDateTime a = todayDateTime.minusDays(1);
+        LocalDateTime b = todayDateTime.minusSeconds(1);
+        System.out.println(todayDateTime);
+        System.out.println(a);
+        System.out.println(b);
         //startOfDay();
-        yesDay();
+        //yesDay();
         //nowDay();
         LocalDate date = LocalDate.now();
 //        LocalDateTime endDate = now.plusDays(1).atStartOfDay().minusSeconds(1);
